@@ -1,0 +1,312 @@
+.slider .allCards {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.slider .allCards::-webkit-scrollbar {
+  display: none;
+}
+.slider .allCards .card-wrapper {
+  position: relative;
+  border-radius: 10px;
+  margin: 0 20px;
+}
+
+.slider .allCards .card-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.slider .allCards .card-wrapper:hover::after {
+  opacity: 1;
+  overflow: hidden;
+}
+.slider .allCards .card-wrapper .imgWrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.slider .allCards .card-wrapper .imgWrapper img {
+  transition: all 0.1s ease-in-out;
+  width: 283px;
+  object-fit: contain;
+  overflow: hidden;
+}
+.slider .allCards .card-wrapper:hover .imgWrapper {
+  overflow: hidden;
+}
+.slider .allCards .card-wrapper:hover .imgWrapper > img {
+  transform: scale(1.09);
+  overflow: hidden;
+}
+.slider .allCards .card-wrapper:hover .card-content {
+  bottom: 15px;
+  opacity: 1;
+}
+.slider .allCards .card-wrapper:hover .button {
+  right: 10px;
+  opacity: 1;
+}
+.slider .allCards .card-wrapper .card-content {
+  position: absolute;
+  left: 30px;
+  bottom: -40px;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  transition-delay: opacity 0.2s;
+}
+.slider .allCards .card-wrapper .card-content h5 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.slider .allCards .card-wrapper .card-content h3 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: "Nunito", sans-serif;
+}
+.slider .allCards .card-wrapper .button {
+  position: absolute;
+  top: 10px;
+  right: -45px;
+  z-index: 1;
+  cursor: pointer;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.slider .allCards .card-wrapper .button > svg {
+  width: 50px;
+  height: 50px;
+}
+.slider .allCards .card-wrapper .button:hover {
+  background: #000;
+}
+.slider .allCards .card-wrapper .button:hover > svg {
+  color: #fff;
+}
+
+/*****testimonials***/
+.testimonials-carousel {
+  width: 100%;
+  background-color: var(--accent2);
+  background-image: url("../../images/map-02.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -170px;
+  padding-top: 250px;
+  padding-bottom: 120px;
+}
+.testimonialsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  gap: 40px;
+}
+.testimonialsWrapper > div {
+  flex: 1;
+}
+.testimonialsLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  flex-grow: 1;
+}
+.testimonialsLeft > h5 {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 3px;
+  color: #b0b6bf;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.testimonialsLeft > h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+}
+.testimonialsLeft > h1 span {
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #000;
+}
+.testimonialsLeft .phrase > p {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+.testimonialsLeft > a {
+  font-family: "Nunito", sans-serif;
+  color: #000;
+  transition: var(--transition-hover);
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.testimonialsLeft > a:hover {
+  color: #fff;
+}
+.testimonialsRight {
+  overflow: hidden;
+  width: 39%;
+}
+.testimonialsRight .testimonialCard {
+  background: #fff;
+  padding: 40px 30px 40px 60px;
+  border-radius: 6px;
+  position: relative;
+}
+.testimonialsRight .testimonialCard .avatarContainer {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.testimonialsRight .testimonialCard .avatarContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #ddd;
+}
+
+.testimonialsRight .testimonialCard .cardContent p {
+  font-family: "Nunito", sans-serif;
+  color: #0c121d;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  user-select: none;
+  margin-bottom: 20px;
+}
+.testimonialsRight .testimonialCard .cardContent span {
+  color: var(--accent2);
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: 25px;
+  font-weight: 600;
+}
+.testimonialsRight .testimonialCard .cardContent span span {
+  color: #6d7a8c;
+  font-weight: 500;
+}
+.testimonialsRight .testimonialCard .cardContent > svg {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+}
+.owl-theme .owl-nav {
+  display: none;
+}
+.owl-theme .owl-dots {
+  margin-top: 10px;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #000 !important;
+}
+.owl-theme .owl-dots .owl-dot span {
+  transition: all 0.4s ease-in !important;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 25px;
+}
+.owl-carousel .owl-stage {
+  transition: all 1s ease !important;
+}
+.owl-carousel {
+  z-index: 0 !important;
+}
+@media screen and (max-width: 1200px) {
+  .testimonialsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .testimonialsRight {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .testimonialsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .testimonialsRight,
+  .testimonialsLeft {
+    overflow: hidden;
+    width: 100%;
+  }
+  .testimonialsLeft > h1,
+  .testimonialsLeft > h1 span {
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+  }
+  .testimonialsRight .testimonialCard .cardContent p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+  .testimonialsRight .testimonialCard {
+    background: #fff;
+    padding: 45px 20px 60px 30px;
+    border-radius: 6px;
+    position: relative;
+  }
+  .testimonialsRight .testimonialCard .avatarContainer {
+    width: 70px;
+    height: 70px;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,158 @@
+.servesis {
+  background-color: #f8f8f9;
+  padding-bottom: 40px;
+  padding-top: 100px;
+}
+.serviceTop {
+  display: flex;
+  gap: 50px;
+  width: 85%;
+  margin: 0 auto 30px;
+  align-items: flex-start;
+}
+.serviceTop .serviceTopLef {
+  padding-bottom: 15px;
+}
+.serviceTop .serviceTopLef h5 {
+  color: #b0b6bf;
+  font-family: "Nunito", sans-serif;
+}
+
+.serviceTop .serviceTopLef a {
+  color: #9b9b9b;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+}
+.serviceTop .serviceTopLef a:hover {
+  color: var(--accent2);
+}
+
+.serviceTop .serviceTopLef h2,
+.serviceTop .serviceTopLef span {
+  color: var(--baack-color-dark);
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: 0;
+  color: #0c121d;
+  text-transform: none;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+.serviceTop .serviceTopLef span {
+  color: var(--accent1);
+}
+.serviceTop .serviceTopRight p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6d7a8c;
+  text-transform: none;
+  font-weight: 500;
+}
+.serviceBottom {
+  margin: 30px 0;
+}
+.serviceBottom .serviceCard {
+  text-align: center;
+}
+.serviceBottom .serviceCard > img {
+  width: 70%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: var(--transition-hover);
+}
+.serviceBottom .serviceCard .deal {
+  background: #fff;
+  width: 58%;
+  padding: 10px 15px;
+  margin: -50px auto 0;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--transition-hover);
+  box-shadow: 0 9px 24px 0 rgb(26 47 106 / 5%);
+}
+.serviceBottom .serviceCard .deal a {
+  color: var(--accent2);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.serviceBottom .serviceCard .deal p {
+  line-height: 1.6;
+  color: #6d7a8c;
+  text-transform: none;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+.serviceBottom .serviceCard .deal > svg {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent2);
+  margin-bottom: -40px;
+  padding: 10px;
+  transition: var(--transition-hover);
+}
+.serviceCard:hover > img {
+  transform: scale(1.01);
+}
+.serviceCard:hover .deal {
+  transform: translateY(-5px);
+}
+.serviceCard:hover .deal > svg {
+  color: var(--accent2);
+  background-color: var(--baack-color-dark);
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .serviceTop {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .serviceTop .serviceTopLef h2,
+  .serviceTop .serviceTopLef span {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .serviceTop .serviceTopLef h5 {
+    font-size: 14px;
+  }
+  .serviceTop .serviceTopLef a {
+    font-size: 14px;
+  }
+  .serviceTop .serviceTopRight p {
+    margin-bottom: 25px;
+  }
+  .serviceBottom > div > div {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .serviceTop .serviceTopLef h2,
+  .serviceTop .serviceTopLef span {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .serviceTop .serviceTopRight p {
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .serviceBottom .serviceCard > img {
+    width: 85%;
+  }
+  .serviceBottom .serviceCard .deal {
+    width: 80%;
+    padding: 10px;
+  }
+  .serviceBottom > div {
+    margin-left: 0;
+  }
+}

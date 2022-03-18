@@ -1,0 +1,117 @@
+.ripon {
+  background-color: var(--accent1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.riponWrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+}
+.riponLeft {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.riponLeft::after {
+  position: absolute;
+  content: url("../../images/mailto.png");
+  right: -100px;
+  top: -40px;
+  width: 100px;
+  height: 100px;
+}
+.riponLeft .svgContainer {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.riponLeft .svgContainer > svg {
+  width: 50%;
+  height: 50%;
+  color: #000000b3;
+  /* border-radius: 50%; */
+}
+.riponLeft .textContent h1 {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+}
+.riponRight a {
+  padding: 20px 40px;
+  border: 2px solid #fff;
+  font-size: 22px;
+  font-family: "Nunito", sans-serif;
+  border-radius: 8px;
+}
+.riponRight:hover a {
+  background-color: #fff;
+  color: #000;
+}
+@media screen and (max-width: 992px) {
+  .riponWrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .riponWrapper > div {
+    flex: 1;
+    width: 100%;
+  }
+  .riponLeft::after {
+    right: -10px;
+    top: -15px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .riponLeft::after {
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+  .riponLeft .textContent h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .riponLeft .svgContainer {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .riponLeft .textContent h1 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .riponLeft .svgContainer {
+    display: none;
+  }
+  .riponLeft::after {
+    display: none;
+  }
+  .riponWrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .riponWrapper > div {
+    flex: 1 1;
+    width: 100%;
+    text-align: center;
+  }
+}

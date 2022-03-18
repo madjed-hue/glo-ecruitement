@@ -1,0 +1,262 @@
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
+.contactNav {
+  height: 50px;
+  line-height: 50px;
+}
+.contactNav,
+.bottomNav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1000;
+}
+.nav__black {
+  background-color: #fff !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+  padding: 0 70px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+.nav__black ul li a {
+  color: var(--text-dark1);
+  z-index: 100;
+}
+.nav__black ul li a:hover {
+  color: var(--accent2);
+}
+.nav__black .question span {
+  color: var(--text-dark1);
+  z-index: 100;
+}
+.contactNav .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactNav .content ul,
+.bottomNav ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+.contactNav .content .rightSide {
+  flex: 0.4;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.contactNav .content ul li,
+.bottomNav ul li {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  position: relative;
+}
+.contactNav .content ul::after,
+.contactNav .content .leftSide ul li::after,
+.contactNav .content .rightSide .search::after,
+.contactNav .content .rightSide .socialIcons .social-ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 49px;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+.contactNav .content ul::after {
+  left: auto;
+  right: -15px;
+}
+.contactNav .content .leftSide ul li::after {
+  left: -16px;
+}
+.contactNav .content .leftSide ul li svg {
+  margin: 0 10px;
+}
+.contactNav .content .rightSide .socialIcons {
+  margin: 0 15px;
+}
+.contactNav .content .rightSide .socialIcons a {
+  display: flex;
+  align-items: center;
+}
+.contactNav .content .rightSide .socialIcons .social-ul::after,
+.contactNav .content .rightSide .socialIcons .social-ul::before,
+.contactNav .content .rightSide .search::after {
+  top: -14px;
+}
+
+.contactNav .content .rightSide .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contactNav .content .rightSide .search::after {
+  right: 0;
+}
+.contactNav .content .rightSide .search a {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  line-height: 49px;
+}
+.bottomNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottomNav .logoContainer {
+  width: 10vmax;
+  padding: 10px 0;
+}
+.bottomNav .logoContainer .logo {
+  width: 100%;
+  object-fit: contain;
+}
+.bottomNav .links {
+  font-size: 18px;
+  font-weight: 600;
+}
+.question {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.question .numbers {
+  display: flex;
+  flex-direction: column;
+}
+.question .numbers span {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.burgerMenu {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .burgerMenu {
+    display: block;
+  }
+  .contactNav,
+  .bottomNav .links,
+  .question {
+    display: none;
+  }
+  .bottomNav > div {
+    flex: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .burgerMenu > div {
+    height: 100%;
+  }
+  .burgerMenu .list {
+    position: relative;
+  }
+  .burgerMenu .list.closedList {
+    overflow: hidden;
+    position: relative;
+  }
+  .burgerMenu .list ul.close {
+    flex-direction: column;
+    height: 0;
+  }
+  .burgerMenu .list ul.open {
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    overflow: visible;
+    background-color: var(--accent2);
+    border-radius: 5px;
+    width: 100%;
+  }
+  .burgerMenu .list ul.open::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid var(--accent2);
+    border-right: 15px solid transparent;
+    position: absolute;
+    top: -28px;
+    right: 0;
+  }
+  .burgerMenu .list ul.open li {
+    padding: 7px 10px;
+    font-size: 16px;
+  }
+  .burgerMenu .list ul.open li:first-child {
+    padding-top: 14px;
+  }
+  .burgerMenu .list ul.open li:last-child {
+    padding-bottom: 14px;
+  }
+  .burgerMenu .list .menu {
+    text-align: end;
+  }
+  .burgerMenu .list .menu > svg {
+    cursor: pointer;
+  }
+  .bottomNav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__black {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .bottomNav > div:last-child {
+    flex: 1;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .burgerMenu .list ul.open {
+    width: 95vw;
+    align-items: center;
+    justify-content: space-evenly;
+    right: 0;
+    top: 0;
+    transform: translate(2%, 20%);
+  }
+  .burgerMenu .list ul.open li {
+    padding: 15px 10px;
+    width: 100%;
+  }
+  .burgerMenu .list ul.open li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .burgerMenu .list ul.open li:first-child {
+    padding-top: 30px;
+  }
+  .burgerMenu .list ul.open li:last-child {
+    padding-bottom: 30px;
+  }
+  .bottomNav .logoContainer {
+    max-width: 60%;
+    /* height: 30px; */
+    flex-basis: 60%;
+  }
+
+  .bottomNav .logoContainer .logo {
+    width: 100%;
+    height: 60px;
+    object-fit: contain;
+  }
+}

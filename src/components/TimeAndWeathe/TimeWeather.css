@@ -1,0 +1,190 @@
+.timeWeather {
+  width: 100%;
+  height: 100%;
+  color: var(--text-dark);
+  overflow: hidden;
+}
+.timeWeather .timeWeather__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.events {
+  /* padding-top: 100px; */
+  /* padding-bottom: 100px; */
+  position: relative;
+}
+.events .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.events img {
+  max-width: 450px;
+}
+
+.events .info {
+  flex: 1;
+}
+.events .info .time,
+.events .info .date {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  gap: 10px;
+  justify-content: center;
+}
+.events .info .time .unit,
+.events .info .date .unit {
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  text-align: center;
+  /* width: 100px; */
+  transition: var(--transition-hover);
+  box-shadow: var(--boxshadow-dark);
+  /* box-shadow: var(--boxshadow-light); */
+}
+.events .info .time .unit span,
+.events .info .date .unit span {
+  display: block;
+  transition: var(--transition-hover);
+}
+.events .info .time .unit span:first-child,
+.events .info .date .unit span:first-child {
+  font-size: 16px;
+  padding: 15px;
+  color: var(--accent1);
+  font-weight: bold;
+}
+.events .info .time .unit span:last-child,
+.events .info .date .unit span:last-child {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-top: 1px solid #d4d4d4;
+}
+.events .info .time .unit:hover,
+.events .info .time .unit:hover span:last-child,
+.events .info .date .unit:hover,
+.events .info .date .unit:hover span:last-child {
+  border-color: var(--accent1);
+}
+@media screen and (min-width: 768px) {
+  .events .info .time .unit,
+  .events .info .date .unit {
+    width: 100px;
+  }
+}
+/************ WEATHER***********/
+.wetherComponent {
+  width: 70%;
+  margin: auto;
+}
+.weatherContent {
+  display: flex;
+  margin: auto;
+  box-shadow: var(--boxshadow-dark);
+}
+.weatherContent .weatherLeftSide {
+  flex: 0.65;
+  flex-basis: 65%;
+  position: relative;
+  background: var(--accent1);
+  background-image: linear-gradient(
+    115deg,
+    hsl(21deg 84% 56%) 0%,
+    hsl(23deg 86% 56%) 11%,
+    hsl(24deg 89% 56%) 22%,
+    hsl(26deg 91% 56%) 33%,
+    hsl(27deg 93% 55%) 44%,
+    hsl(29deg 95% 55%) 56%,
+    hsl(30deg 96% 54%) 67%,
+    hsl(32deg 98% 53%) 78%,
+    hsl(34deg 99% 52%) 89%,
+    hsl(36deg 100% 50%) 100%
+  );
+  padding: 15px 30px;
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.weatherContent h4 {
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+}
+.weatherContent h3 {
+  font-size: 2.7rem;
+  font-family: "Nunito", sans-serif;
+}
+.weatherContent .city,
+.weatherContent .iconAndDesc {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.weatherContent .city,
+.weatherContent .iconAndDesc,
+.weatherContent .windAndHum {
+  margin: 0px 0 10px;
+}
+.weatherContent span {
+  color: #d4d4d4;
+}
+.weatherContent .iconAndDesc {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.weatherContent .windAndHum {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.weatherContent .city span,
+.weatherContent .temperature span,
+.weatherContent .windAndHum span {
+  font-size: 14px;
+}
+.weatherContent .weatherRightSide {
+  flex: 0.35;
+  flex-basis: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent1);
+  background-image: linear-gradient(
+    180deg,
+    hsl(21deg 84% 56%) 0%,
+    hsl(22deg 86% 56%) 11%,
+    hsl(23deg 88% 56%) 22%,
+    hsl(24deg 90% 56%) 33%,
+    hsl(25deg 92% 55%) 44%,
+    hsl(26deg 94% 55%) 56%,
+    hsl(27deg 96% 54%) 67%,
+    hsl(29deg 97% 53%) 78%,
+    hsl(30deg 99% 52%) 89%,
+    hsl(32deg 100% 50%) 100%
+  );
+  padding: 15px 30px;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.weatherContent .weatherRightSide div > svg {
+  font-size: 120px;
+  color: var(--text-dark);
+}
+@media screen and (max-width: 425px) {
+  .weatherContent .weatherRightSide {
+    display: none;
+  }
+  .weatherContent .weatherLeftSide {
+    flex: 1;
+    border-radius: 5px;
+  }
+  .wetherComponent {
+    width: 90%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+:root {
+  scroll-behavior: smooth;
+  --text-dark1: #222;
+  --text-light: rgba(15, 15, 15, 0.5);
+  --text-dark: rgb(233, 230, 230);
+  --baack-color-dark: rgba(0, 0, 0, 100%);
+  --baack-color-light: rgba(255, 255, 255, 1);
+  --accent1: hsl(21, 84%, 56%);
+  --accent2: hsl(197, 92%, 47%);
+  --accent3: hsl(40, 89%, 65%);
+  --transition-hover: all 0.3s ease-in-out;
+  --banner-back-light: #000000;
+  --banner-backimage-light: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+  --boxshadow-dark: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  --boxshadow-light: rgb(255 255 255 / 69%) 0px 26px 30px -10px,
+    rgb(255 255 255 / 73%) 0px 16px 10px -10px;
+}
+.container {
+  width: 95%;
+  max-width: 95%;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+a {
+  color: var(--baack-color-light);
+}
+
+svg {
+  color: var(--accent2);
+}
+a {
+  text-decoration: none;
+  transition: var(--transition-hover);
+}
+a > svg {
+  color: var(--text-dark);
+  transition: var(--transition-hover);
+}
+a:hover {
+  color: var(--accent2);
+}
+a:hover > svg {
+  color: var(--accent2);
+  transition: var(--transition-hover);
+}
